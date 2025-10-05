@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FODO</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FODO</div>
+            <div class="nav">
+                <a href="homepage.html">Home</a>
+                <a href="about.html" class="active">About us</a>
+                <a href="menu.html">Menu</a>
+                <a href="signup.html">Sign up</a>
+                <a href="contact us.html">Contact us</a>
+                <a href="payment.html">Payment</a>
+            </div>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+
+    <section class="chefs-section">
+        <h2>Meet Our Expert Chefs</h2>
+        <div class="chefs-container">
+            <div class="chef-card">
+                <img src="./image/chef1.jpeg" alt="Chef Devon Lane">
+                <div class="chef-info">
+                    <h3>Devon Lane</h3>
+                    <p>President of Sales</p>
+                </div>
+            </div>
+
+            <div class="chef-card">
+                <img src="./image/chef2.jpeg" alt="Chef Ralph Edwards">
+                <div class="chef-info">
+                    <h3>Ralph Edwards</h3>
+                    <p>Chef Manager</p>
+                </div>
+            </div>
+
+            <div class="chef-card">
+                <img src="./image/chef3.jpeg" alt="Chef Marvin McKinney">
+                <div class="chef-info">
+                    <h3>Marvin McKinney</h3>
+                    <p>Main Chef</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="fun-fact-btn" onclick="showFunFact()">Click for a Fun Fact About Our Chefs!</button>
+        <p id="factDisplay"></p>
+    </section>
+
+    <section class="about-section">
+        <div class="about-content">
+            <div class="about-images">
+                <img src="./image/rghit girl.jpeg" alt="Girl" class="about-img">
+                <img src="./image/left boy.jpeg" alt="Boy" class="about-img">
+            </div>
+            <p class="tagline">ABOUT US</p>
+            <h2>Variety Of Flavours From Egyptian Cuisine</h2>
+            <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+            </p>
+
+            <div class="stats-container">
+                <div class="stats-box">
+                    <p><span class="counter-number">500</span> Happy Customers</p>
+                </div>
+                <div class="stats-box">
+                    <p><span class="counter-number">50</span> Menu Items</p>
+                </div>
+                <div class="stats-box">
+                    <p><span class="counter-number">10</span> Expert Chefs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="deals-section">
+        <div class="deals-container">
+            <div class="deal-card spicy">
+                <h3>SPICY FRIED CHICKEN</h3>
+                <p>Limited Time Offer</p>
+                <img src="./image/22.png" alt="Spicy Fried Chicken">
+                <a href="menu.html">
+                    <button>Order Now</button>
+                </a>
+            </div>
+
+            <div class="deal-card special">
+                <h3>TODAY SPECIAL FOOD</h3>
+                <p>Limited Time Offer</p>
+                <img src="./image/23.png" alt="Today Special Food">
+                <a href="menu.html">
+                    <button>Order Now</button>
+                </a>
+            </div>
+
+            <div class="deal-card roll">
+                <h3>SPECIAL CHICKEN ROLL</h3>
+                <p>Limited Time Offer</p>
+                <img src="./image/21.png" alt="Special Chicken Roll">
+                <a href="menu.html">
+                    <button>Order Now</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        </br>
+        <div class="footer-top-info">
+            <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
+            <div><i>✉</i><span><strong>Send Email:</strong> info@example.com</span></div>
+            <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-info">
+                <h3>FODO</h3>
+                <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#top">Back to Top</a></li>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        var currentIndex = 0;
+        function showFunFact() {
+            var facts = [
+                "Our chefs have over 10 years of combined experience!",
+                "We source all our ingredients from local Egyptian farmers.",
+                "Our secret recipes have been passed down for generations.",
+                "We've served 1000+ happy customers this year alone.",
+                "All our chefs are certified in food safety standards."
+            ];
+
+            var display = document.getElementById("factDisplay");
+            display.textContent = "Did you know? " + facts[currentIndex];
+            display.style.color = "black";
+            currentIndex = currentIndex + 1;
+        }
+
+        $(document).ready(function () {
+            $('a[href*="#"]').on('click', function (e) {
+                if ($($(this).attr('href')).length) {
+                    e.preventDefault();
+                    $('html, body').animate(
+                        { scrollTop: $($(this).attr('href')).offset().top - 100 },
+                        800
+                    );
+                }
+            });
+
+            $('.counter-number').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

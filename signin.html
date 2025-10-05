@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">FODO</div>
+            <div class="nav">
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="menu.html">Menu</a>
+                <a href="signup.html" class="active">Sign up</a>
+                <a href="contact us.html">Contact us</a>
+                <a href="payment.html">Payment</a>
+            </div>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+
+    <div class="contact-wrapper">
+        <form class="container">
+            <h1>FODO</h1>
+            <h2 id="Welcome">Welcome Back</h2>
+
+            <div class="input-group">
+                <input type="email" placeholder="Email Address" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password" id="password" required>
+            </div>
+
+            <a href="signup.html">
+                <h4>Forget Password?</h4>
+            </a>
+
+            <button type="button" id="submit" onclick="signIn()">SIGN IN</button>
+
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+
+        <div class="image-section">
+            <img src="./image/welcome.gif" id="welcomeImage" onload="welcomeback()">
+            <img src="./image/girl.png" alt="Signup Image" id="girl">
+        </div>
+    </div>
+
+    <script>
+        function welcomeback() {
+            var fireworks = document.getElementById("welcomeImage");
+            setTimeout(UPFireworks, 500);
+            fireworks.style.transform = "translateY(90px)";
+        }
+
+        function UPFireworks() {
+            var fireworks = document.getElementById("welcomeImage");
+            fireworks.style.transform = "translateY(20px)";
+            fireworks.style.transition = "transform 1.5s";
+        }
+
+
+
+        function signIn() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var button = document.getElementById("submit");
+
+            if (email == "" || password == "") {
+                alert("Please enter email and password.");
+                return false;
+            } 
+            
+            else {
+               
+                setTimeout(signingIn, 1100);
+                button.innerHTML = "Signing in...";
+            }
+        }
+
+        
+        function signingIn(){
+            window.location.href = "welcome.html";
+        }
+
+
+
+
+    </script>
+
+    <footer>
+        <div class="footer-top-info">
+            <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
+            <div><i>✉️</i><span><strong>Send Email:</strong> info@example.com</span></div>
+            <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-info">
+                <h3>FODO</h3>
+                <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                </ul>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+                <ul>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

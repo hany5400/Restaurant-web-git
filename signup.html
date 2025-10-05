@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FODO</div>
+            <div class="nav">
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="menu.html">Menu</a>
+                <a href="signup.html" class="active">Sign up</a>
+                <a href="contact us.html">Contact us</a>
+                <a href="payment.html">Payment</a>
+            </div>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+
+
+    <div class="contact-wrapper">
+
+        <form class="container">
+
+            <div class="loading">
+                <div class="loadPart loadN" oninput="loading()"></div>
+                <div class="loadPart loadE" oninput="loading()"></div>
+                <div class="loadPart loadP" oninput="loading()"></div>
+                <div class="loadPart loadC" oninput="loading()"></div>
+            </div>
+
+            <h1>FODO</h1>
+            <h2>Create an Account</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Full Name" id="full" required>
+                <input type="email" placeholder="Email Address" id="email" required>
+            </div>
+            <div class="input-group">
+                <div class="pass">
+                    <input type="password" placeholder="Password" id="password" oninput="checkStrength()" required>
+                    <p id="strength"></p>
+                </div>
+                <input type="password" placeholder="Confirm Password" id="confirm" required>
+            </div>
+
+
+
+            <button type="submit" id="submit-button" onclick="myFunction()">SIGN UP</button>
+
+            <script>
+                function myFunction() {
+                    var full = document.getElementById("full").value;
+                    var password = document.getElementById("password").value;
+                    var confirm = document.getElementById("confirm").value;
+                    var email = document.getElementById("email").value;
+
+
+                    var nameParts = full.split(" ");
+                    if (nameParts.length < 2) {
+                        alert("You should enter your full name (at least first and last name).");
+                        return false;
+                    }
+
+                    if (password !== confirm) {
+                        alert("Passwords do not match.");
+                        return false;
+                    }
+
+                    if (full == "" || email == "" || password == "" || confirm == "") {
+                        alert("You must fill all the required data");
+                        return false;
+
+                    }
+
+
+                    else {
+                        alert("Welcome to FODO!");
+                        return true;
+                    }
+
+                }
+
+
+
+                function loading() {
+                    var full = document.querySelector("#full").value;
+                    var email = document.querySelector("#email").value;
+                    var password = document.querySelector("#password").value;
+                    var confirm = document.querySelector("#confirm").value;
+
+                    var loadN = document.querySelector(".loadN");
+                    var loadE = document.querySelector(".loadE");
+                    var loadP = document.querySelector(".loadP");
+                    var loadC = document.querySelector(".loadC");
+
+                    if (full !== "") {
+                        loadN.style.backgroundColor = "red";
+                    }
+
+                    else {
+                        loadN.style.backgroundColor = "";
+                    }
+
+                    if (email !== "") {
+                        loadE.style.backgroundColor = "red";
+                    }
+
+                    else {
+                        loadE.style.backgroundColor = "";
+                    }
+
+                    if (password !== "") {
+                        loadP.style.backgroundColor = "red";
+                    }
+
+                    else {
+                        loadP.style.backgroundColor = "";
+                    }
+
+                    if (confirm !== "") {
+                        loadC.style.backgroundColor = "red";
+                    }
+
+                    else {
+                        loadC.style.backgroundColor = "";
+                    }                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                }
+
+                document.querySelector("#full").addEventListener("input", loading);
+                document.querySelector("#email").addEventListener("input", loading);
+                document.querySelector("#password").addEventListener("input", loading);
+                document.querySelector("#confirm").addEventListener("input", loading);
+
+                function checkStrength() {
+                    var password = document.getElementById("password").value;
+                    var strengthText = document.getElementById("strength");
+
+                    var hasNumber = /[0-9]/;
+                    var hasSymbol = /[!@#$%^&*]/;
+
+                    if (hasNumber.test(password) && hasSymbol.test(password)) {
+                        strengthText.innerText = "The password is strong";
+                        strengthText.style.color = "green";
+                    }
+
+                    else {
+                        strengthText.innerText = "The password is weak";
+                        strengthText.style.color = "red";
+                    }
+                }
+            </script>
+
+            <p>Already have an account? <a href="signin.html">Login</a></p>
+        </form>
+        <div class="image-section">
+            <img src="./image/girl.png" alt="Signup Image">
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        </br>
+        <div class="footer-top-info">
+            <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
+            <div><i>✉️</i><span><strong>Send Email:</strong> info@example.com</span></div>
+            <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-info">
+                <h3>FODO</h3>
+                <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                </ul>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+                <ul>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>

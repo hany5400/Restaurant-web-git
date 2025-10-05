@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" a href="payment.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FODO</div>
+            <div class="nav">
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="menu.html">Menu</a>
+                <a href="signup.html">Sign up</a>
+                <a href="contact us.html">Contact us</a>
+                <a href="payment.html" class="active">Payment</a>
+            </div>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Billing Details</h2>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Street Address">
+
+
+        <div class="shipping-section">
+            <h3>Cairo Shipping</h3>
+            <select id="cairo-district" onchange="calculateCairoShipping()">
+                <option value="">Select Your District</option>
+                <option value="downtown">Downtown Cairo</option>
+                <option value="garden-city">Garden City</option>
+                <option value="zamalek">Zamalek</option>
+                <option value="maadi">Maadi</option>
+                <option value="heliopolis">Heliopolis</option>
+                <option value="nasr-city">Nasr City</option>
+                <option value="new-cairo">New Cairo</option>
+                <option value="6-october">6th of October City</option>
+                <option value="shubra">Shubra</option>
+                <option value="abbassia">Abbassia</option>
+                <option value="ain-shams">Ain Shams</option>
+                <option value="hadayek">Hadayek El-Kobba</option>
+                <option value="mokattam">Mokattam</option>
+                <option value="dokki">Dokki</option>
+                <option value="agouza">Agouza</option>
+                <option value="imbaba">Imbaba</option>
+                <option value="bulaq">Bulaq</option>
+                <option value="old-cairo">Old Cairo</option>
+                <option value="masr-elgedida">Masr El Gedida</option>
+                <option value="elshrouk">El Shrouk</option>
+                <option value="badr-city">Badr City</option>
+                <option value="elshorouk">El Shorouk City</option>
+                <option value="rehab">Rehab City</option>
+                <option value="katameya">Katameya</option>
+                <option value="madinty">Madinty</option>
+                <option value="other">Other Areas</option>
+            </select>
+            <p class="cost">Shipping Cost: <span id="shipping-cost">EGP 0</span></p>
+        </div>
+
+        <input type="text" placeholder="Postcode / Zip">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+    </div>
+
+    <div class="container">
+        <h2>Your Order</h2>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td><img src="./image/item1.png"> <p class="brick">Brick Oven Pepperoni</p></td>
+                <td>$281</td>
+                <td><input type="number" id="quantity" value="1" min="1" onchange="calculateTotal()"></td>
+                <td id="product-total">$281</td>
+            </tr>
+        </table>
+        <br>
+        <p>Subtotal: $<span id="subtotal">281.00</span></p>
+        <p>Shipping: $<span id="shipping">5.00</span></p>
+        <p>Tax: $<span id="tax-amount">0.00</span></p>
+        <p><strong>Total: $<span id="total-amount">286.00</span></strong></p>
+    </div>
+
+    <div class="container">
+        <h2>Payment Options</h2>
+        <label><input type="radio" name="payment" checked> Direct Bank Transfer</label>
+        <label><input type="radio" name="payment"> Cheque Payment</label>
+        <label><input type="radio" name="payment" id="credit-card-radio"> Credit Card
+            <span id="card-icon" class="card-icon"></span>
+        </label>
+        <div id="credit-card-details" style="display:none;">
+            <input type="text" id="card-number" placeholder="Card Number (xxxx-xxxx-xxxx-xxxx)"
+                oninput="formatCardNumber(this); detectCardType(this)">
+            <p id="card-error" class="error-message"></p>
+            <input type="text" placeholder="Cardholder Name">
+            <input type="text" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)">
+            <input type="text" placeholder="CVV" maxlength="4">
+        </div>
+        <button class="place-order" onclick="validatePayment()">Place Order</button>
+    </div>
+
+    <script>
+        function calculateCairoShipping() {
+            var district = document.getElementById('cairo-district').value;
+            var shippingCostElement = document.getElementById('shipping-cost');
+            var shippingCost = 0;
+    
+            if (district == "downtown" || district == "garden-city" || district == "zamalek") {
+                shippingCost = 15;
+            } else if (district == "maadi" || district == "heliopolis" || district == "nasr-city") {
+                shippingCost = 20;
+            } else if (district == "new-cairo" || district == "6-october" || district == "rehab") {
+                shippingCost = 25;
+            } else if (district == "other") {
+                shippingCost = 30;
+            } else {
+                shippingCost = 20;
+            }
+    
+            shippingCostElement.textContent = "EGP " + shippingCost;
+            document.getElementById('shipping').textContent = shippingCost.toFixed(2);
+            calculateTotal();
+        }
+    
+        function calculateTotal() {
+            const price = 281;
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const subtotal = price * quantity;
+            const shipping = parseFloat(document.getElementById('shipping').textContent) || 0;
+            const tax = subtotal * 0.1;
+    
+            document.getElementById('product-total').textContent = "$" + subtotal.toFixed(2);
+            document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+            document.getElementById('tax-amount').textContent = tax.toFixed(2);
+            document.getElementById('total-amount').textContent = (subtotal + shipping + tax).toFixed(2);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('shipping').textContent = "0.00";
+        });
+    
+        function detectCardType(input) {
+        
+            let cardType = 'unknown';
+            for (const [type, regex] of Object.entries(cardTypes)) {
+                if (regex.test(cardNumber)) {
+                    cardType = type;
+                    break;
+                }
+            }
+    
+            document.getElementById('card-icon').className = `card-icon ${cardType}`;
+        }
+    
+        document.getElementById('credit-card-radio').addEventListener('change', function () {
+            document.getElementById('credit-card-details').style.display =
+                this.checked ? 'block' : 'none';
+        });
+    
+        function validatePayment() {
+            const cardRadio = document.getElementById('credit-card-radio');
+            if (cardRadio.checked) {
+                const cardNumber = document.getElementById('card-number').value.replace(/\s/g, '');
+                if (cardNumber.length !== 16) {
+                    alert('Please enter a valid 16-digit card number');
+                    return;
+                }
+            }
+            alert('Order placed successfully!');
+        }
+    </script>
+</body>
+
+</html>

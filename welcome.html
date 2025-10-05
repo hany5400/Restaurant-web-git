@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+
+<body>
+
+    <div class="welcome">
+        <div class="content">
+            <img src="./image/animated_fireworks.gif" class="left-img" id="left">
+            <div class="text" id="text">
+                <h1 id="text1">Welcome Back To FODO</h1>
+                <h2 id="text2">The website where you find all kinds of food</h2>
+                <a href="homepage.html">
+                    <button id="home">Back Home</button>
+                </a>
+            </div>
+            <img src="./image/animated_fireworks.gif" class="right-img" id="right">
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(afterh1, 1000);
+            setTimeout(afterh2, 2000);
+            setTimeout(afterBTN, 3000);
+        }
+
+        function afterh1() {
+            document.getElementById("text1").style.opacity = 1;
+        }
+
+        function afterh2() {
+            document.getElementById("text2").style.opacity = 1;
+        }
+
+        function afterBTN() {
+            document.getElementById("home").style.opacity = 1;
+        }
+    </script>
+
+</body>
+
+

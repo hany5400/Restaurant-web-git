@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FODO</div>
+      <div class="nav">
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="signup.html">Sign up</a>
+        <a href="contact us.html">Contact us</a>
+        <a href="payment.html">Payment</a>
+      </div>
+      <div class="cart-icon">🛒</div>
+    </nav>
+  </header>
+
+  <div class="background-image"></div>
+
+  <br>
+
+  <div class="container">
+    <div class="sidebar">
+
+      <div class="sidebar-section search-box">
+        <h3>Search</h3>
+        <input type="text" placeholder="Search here" />
+      </div>
+
+      <div class="sidebar-section categories">
+        <h3>Categories</h3>
+        <div class="category-list">
+          <button onclick="filterByCategory('Chicken')">Chicken</button>
+          <button onclick="filterByCategory('Pasta')">Pasta</button>
+          <button onclick="filterByCategory('Salad')">Salad</button>
+          <button onclick="filterByCategory('Pizza')">Pizza</button>
+          <button onclick="filterByCategory('Meat')">Meat</button>
+          <button onclick="filterByCategory('Other')">Other Kinds of Food</button>
+        </div>
+      </div>
+
+      <div class="sidebar-section filter">
+        <h3>Filter By Price</h3>
+        <input type="range" id="priceRange" min="0" max="60" oninput="updatePriceValue()" />
+        <p id="priceValue">$30</p>
+        <button onclick="filterByPrice()">Filter</button>
+        <button onclick="showAllItems()">Show All</button>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="menu-header">
+        <p>Showing 1 - 16 of 30 Results</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <div class="menu-item" data-price="24" data-category="Pizza">
+          <img src="./image/item2.png" alt="Chicken Pizza" />
+          <h4>Chicken Pizza</h4>
+          <p class="price">$24.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="28" data-category="Salad">
+          <img src="./image/item4.png" alt="Egg And Cucumber" />
+          <h4>Egg And Cucumber</h4>
+          <p class="price">$28.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="20" data-category="Chicken">
+          <img src="./image/p3.jpeg" alt="Chicken Fried Rice" />
+          <h4>Chicken Fried Rice</h4>
+          <p class="price">$20.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="58" data-category="Chicken">
+          <img src="./image/item3.png" alt="Chicken Leg Piece" />
+          <h4>Chicken Leg Piece</h4>
+          <p class="price">$58.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+
+        <div class="menu-item" data-price="15" data-category="Meat">
+          <img src="./image/item3.png" alt="Cheese Burger" />
+          <h4>Cheese Burger</h4>
+          <p class="price">$15.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="12" data-category="Salad">
+          <img src="./image/p3.jpeg" alt="Fresh Salad" />
+          <h4>Fresh Salad</h4>
+          <p class="price">$12.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="18" data-category="Pasta">
+          <img src="./image/item4.png" alt="Italian Pasta" />
+          <h4>Italian Pasta</h4>
+          <p class="price">$18.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="10" data-category="Salad">
+          <img src="./image/item2.png" alt="Tomato Soup" />
+          <h4>Tomato Soup</h4>
+          <p class="price">$10.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+
+        <div class="menu-item" data-price="30" data-category="Chicken">
+          <img src="./image/item2.png" alt="Grilled Chicken" />
+          <h4>Grilled Chicken</h4>
+          <p class="price">$30.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="8" data-category="Other">
+          <img src="./image/item4.png" alt="Fruit Smoothie" />
+          <h4>Fruit Smoothie</h4>
+          <p class="price">$8.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="22" data-category="Other">
+          <img src="./image/p3.jpeg" alt="Chocolate Cake" />
+          <h4>Chocolate Cake</h4>
+          <p class="price">$22.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="40" data-category="Pasta">
+          <img src="./image/item3.png" alt="Seafood Pasta" />
+          <h4>Seafood Pasta</h4>
+          <p class="price">$40.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+
+        <div class="menu-item" data-price="16" data-category="Meat">
+          <img src="./image/p3.jpeg" alt="Spicy Tacos" />
+          <h4>Spicy Tacos</h4>
+          <p class="price">$16.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="35" data-category="Meat">
+          <img src="./image/item3.png" alt="BBQ Ribs" />
+          <h4>BBQ Ribs</h4>
+          <p class="price">$35.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="14" data-category="Salad">
+          <img src="./image/item2.png" alt="Greek Salad" />
+          <h4>Greek Salad</h4>
+          <p class="price">$14.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+        <div class="menu-item" data-price="9" data-category="Other">
+          <img src="./image/item4.png" alt="Blueberry Muffin" />
+          <h4>Blueberry Muffin</h4>
+          <p class="price">$9.00</p>
+          <a href="payment.html">
+            <button>Order Now</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <span>...</span>
+        <button>&gt;</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    function updatePriceValue() {
+      var max = document.getElementById("priceRange").value;
+      var value = document.getElementById("priceValue").innerHTML = "$" + max;
+    }
+
+    function filterByPrice() {
+      var max = document.getElementById("priceRange").value;
+      var items = document.getElementsByClassName("menu-item");
+
+      for (var i = 0; i < items.length; i++) {
+        var itemPrice = parseInt(items[i].getAttribute("data-price"));
+        if (itemPrice <= max) {
+          items[i].style.display = "block";
+        }
+
+        else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+
+
+    function showAllItems() {
+      var items = document.getElementsByClassName("menu-item");
+      for (var i = 0; i < items.length; i++) {
+        items[i].style.display = "block";
+      }
+    }
+
+
+
+    function filterByCategory(category) {
+      var items = document.getElementsByClassName("menu-item");
+      for (var i = 0; i < items.length; i++) {
+        var itemCategory = items[i].getAttribute("data-category");
+
+        if (itemCategory == category) {
+          items[i].style.display = "block";
+        }
+
+        else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+
+  </script>
+
+
+  <footer>
+    </br>
+    <div class="footer-top-info">
+      <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
+      <div><i>✉️</i><span><strong>Send Email:</strong> info@example.com</span></div>
+      <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-info">
+        <h3>FODO</h3>
+        <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="about.html">Menu</a></li>
+        </ul>
+        <ul>
+          <li><a href="signup.html">Sign up</a></li>
+        </ul>
+        <ul>
+          <li><a href="contact us.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
+
+
+
