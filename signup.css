@@ -315,6 +315,66 @@ footer {
 
 
 
+
+/* Navbar responsive like About Us page */
+@media (max-width: 1024px) {
+    .nav {
+        display: none; /* hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a0f1a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav.show {
+        display: flex; /* show menu when hamburger clicked */
+    }
+
+    .nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    .cart-icon {
+        order: 2; /* keep cart icon at right */
+    }
+}
+
+/* Smaller screens (mobile) */
+@media (max-width: 768px) {
+    .nav a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+}
+
+
+
 /* ===== Footer Responsive Vertical ===== */
 
 /* للتابلت */
@@ -357,58 +417,6 @@ footer {
     }
 }
 
-/* Navbar basic */
-.nav {
-    display: flex;
-    gap: 25px;
-}
-
-/* Hide nav menu on small screens */
-.nav.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* تحت الـ navbar */
-    left: 0;
-    width: 100%;
-    background-color: #0a0f1a;
-    padding: 15px 0;
-    gap: 10px;
-    z-index: 1000;
-}
-
-/* Hide nav by default on small screens */
-@media (max-width: 1024px) {
-    .nav {
-        display: none; /* hide menu initially */
-    }
-
-    .menu-toggle {
-        display: block; /* show hamburger button */
-        font-size: 28px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    .navbar {
-        position: relative;
-    }
-}
-
-/* Smaller screens */
-@media (max-width: 768px) {
-    .nav.show {
-        top: 55px;
-        padding: 10px 0;
-    }
-
-    .nav a {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-}
 
 
 
