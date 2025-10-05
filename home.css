@@ -892,6 +892,17 @@ footer {
   }
 }
 
+/* ===== Responsive for testimonial slider buttons ===== */
+@media (max-width: 768px) {
+  .slider-nav button {
+    font-size: 24px;       /* أكبر شويه عشان يبانوا متساويين */
+    padding: 12px 16px;    /* توحيد البادينج */
+    width: 60px;           /* عرض ثابت */
+    height: 60px;          /* ارتفاع ثابت */
+  }
+}
+
+
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
 
