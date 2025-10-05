@@ -895,8 +895,13 @@ footer {
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
   .food-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 10px; /* خفيف من الجوانب */
+    width: 100%;
   }
 
   .news-container {
@@ -904,11 +909,13 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    gap: 15px;
   }
 
   .news-card {
     width: 90%;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -920,7 +927,7 @@ footer {
   .news-card button {
     display: block;
     width: 80%;
-    margin: 15px auto 20px;
+    margin: 10px auto 20px;
     font-size: 14px;
     text-align: center;
   }
