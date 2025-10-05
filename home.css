@@ -429,6 +429,10 @@ body {
   margin: 0 5px;
 }
 
+.prev-btn {
+  font-size: 28px;
+}
+
 
 .food-news {
   text-align: center;
