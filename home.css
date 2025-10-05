@@ -1053,32 +1053,37 @@ footer {
   }
 }
 
-/* ===== Footer Responsive ===== */
+/* ===== Footer Responsive Vertical ===== */
 
 /* للتابلت */
 @media (max-width: 1024px) {
   .footer-main {
-    flex-direction: column;
+    flex-direction: column;   /* كل الأقسام عمودي */
     text-align: center;
     padding: 40px 20px;
+    align-items: center;      /* المركزية لكل المحتوى */
+    gap: 30px;                /* مسافة بين الأقسام */
   }
 
   .footer-info,
   .footer-links,
   .footer-contact {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0;          /* مسافة موجودة في gap */
   }
 
   .footer-top-info {
-    flex-direction: column;
+    flex-direction: column;    /* أيقونات عمودية */
+    align-items: center;
     padding: 20px 30px;
+    gap: 25px;                 /* المسافة بين كل div أيقونات */
   }
 
   .footer-top-info div {
-    justify-content: center;
-    margin-bottom: 15px;
-    gap: 25px; /* زودنا التباعد بين icons */
+    display: flex;
+    flex-direction: column;    /* أيقونات داخل كل div عمودي */
+    align-items: center;
+    gap: 20px;                 /* المسافة بين الأيقونات */
   }
 }
 
@@ -1088,13 +1093,15 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 30px 15px;
+    align-items: center;
+    gap: 25px;
   }
 
   .footer-info,
   .footer-links,
   .footer-contact {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .footer-links ul li a {
@@ -1104,14 +1111,16 @@ footer {
 
   .footer-top-info {
     flex-direction: column;
+    align-items: center;
     padding: 15px 20px;
-    gap: 15px; /* زودنا التباعد هنا كمان */
+    gap: 20px;
   }
 
   .footer-top-info div {
-    justify-content: center;
-    margin-bottom: 10px;
-    gap: 20px; /* زودنا التباعد بين icons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* المسافة بين الأيقونات */
   }
 
   .footer-bottom {
