@@ -401,11 +401,51 @@ footer {
   margin-bottom: 5px;
 }
 
+/* ===== Navbar Responsive ===== */
 
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+/* For screens <=1024px */
+@media (max-width: 1024px) {
+  .nav {
+      display: none; /* hide menu by default */
+      flex-direction: column;
+      position: absolute;
+      top: 65px; /* adjust to navbar height */
+      right: 20px;
+      background-color: #0a0f1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+  }
 
+  .nav a {
+      margin-bottom: 15px;
+      font-size: 18px;
+  }
 
+  .menu-toggle {
+      display: block;
+  }
 
+  .cart-icon {
+      margin-left: 15px;
+  }
+}
+
+/* Show menu when toggled */
+.nav.show {
+  display: flex;
+}
 
 
 
