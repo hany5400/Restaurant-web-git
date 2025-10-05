@@ -196,92 +196,73 @@
 
     </script>
 
-<script>
-    // Navbar toggle for mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-  
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-      menuToggle.setAttribute('aria-expanded', !expanded);
-    });
-  
-    // Close menu on link click (mobile)
-    document.querySelectorAll('#nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navMenu.classList.contains('show')) {
-          navMenu.classList.remove('show');
-          menuToggle.setAttribute('aria-expanded', false);
-        }
-      });
-    });
-  
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('#nav-menu a');
-  
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 70;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !expanded);
+        });
+
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.setAttribute('aria-expanded', false);
+                }
+            });
+        });
+    </script>
 
 
 
-    <footer>
-        </br>
-        <div class="footer-top-info">
-            <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
-            <div><i>✉️</i><span><strong>Send Email:</strong> info@example.com</span></div>
-            <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
-        </div>
+<footer>
+</br>
+<div class="footer-top-info">
+    <div><i>📍</i><span><strong>Address:</strong> Masaken Al Mohandesin, Nasr City</span></div>
+    <div><i>✉️</i><span><strong>Send Email:</strong> info@example.com</span></div>
+    <div><i>📞</i><span><strong>Call Emergency:</strong> +88 0123 654 99</span></div>
+</div>
 
-        <div class="footer-main">
-            <div class="footer-info">
-                <h3>FODO</h3>
-                <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="homepage.html">Home</a></li>
-                </ul>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-                <ul>
-                    <li><a href="menu.html">Menu</a></li>
-                </ul>
-                <ul>
-                    <li><a href="signup.html">Sign up</a></li>
-                </ul>
-                <ul>
-                    <li><a href="contact us.html">Contact us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
-            </div>
-        </div>
+<div class="footer-main">
+    <div class="footer-info">
+        <h3>FODO</h3>
+        <p>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur.</p>
+    </div>
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <ul>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+        <ul>
+            <li><a href="signup.html">Sign up</a></li>
+        </ul>
+        <ul>
+            <li><a href="contact us.html">Contact us</a></li>
+        </ul>
+    </div>
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Monday - Friday: <span style="color: orange;">8am - 4pm</span></p>
+    </div>
+</div>
 
-        <div class="footer-bottom">
-            <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
-        </div>
+<div class="footer-bottom">
+    <p>© All Copyright 2024 by FODO | <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a></p>
+</div>
 
-    </footer>
+</footer>
+
+
+
 </body>
 
 </html>

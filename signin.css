@@ -17,43 +17,103 @@ body {
 }
 
 
+/* ===== Navbar ===== */
 .navbar {
     background-color: #0a0f1a;
-    padding: 15px 50px;
+    padding: 7px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo {
     font-size: 28px;
     font-weight: bold;
     color: #eb0029;
-}
-
-.nav {
+  }
+  
+  .nav {
     display: flex;
     gap: 25px;
-}
-
-.nav a {
+  }
+  
+  .nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-.nav a:hover,
-.nav a.active {
+  }
+  
+  .nav a:hover,
+  .nav a.active {
     color: orange;
-}
-
-.cart-icon {
-    font-size: 20px;
+  }
+  
+  .cart-icon {
+    font-size: 22px;
     color: white;
     cursor: pointer;
-}
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* ===== Navbar Responsive ===== */
+  @media (max-width: 1024px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      background-color: #0a0f1a;
+      padding: 25px 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      width: 180px;
+      text-align: left;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+  
+    .nav a {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+  
+    .nav.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .cart-icon {
+      margin-left: 10px;
+    }
+  }
+  
+  /* ===== Animation ===== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 
 
 .contact-wrapper {
@@ -155,7 +215,7 @@ button {
     transition: 0.3s ease;
 }
 
-button:hover {
+#submit:hover {
     background: #d62839;
 }
 
