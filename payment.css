@@ -9,6 +9,13 @@ body {
   background-color: #f8f4ec;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .navbar {
   background-color: #0a0f1a;
   padding: 15px 50px;
@@ -91,7 +98,7 @@ body {
   margin-top: 10px;
 }
 
-.cost{
+.cost {
   margin-top: 10px;
 }
 
@@ -176,32 +183,40 @@ img {
 /* للتابلت */
 @media (max-width: 1024px) {
   .footer-main {
-    flex-direction: column;   /* كل الأقسام عمودي */
+    flex-direction: column;
+    /* كل الأقسام عمودي */
     text-align: center;
     padding: 40px 20px;
-    align-items: center;      /* المركزية لكل المحتوى */
-    gap: 30px;                /* مسافة بين الأقسام */
+    align-items: center;
+    /* المركزية لكل المحتوى */
+    gap: 30px;
+    /* مسافة بين الأقسام */
   }
 
   .footer-info,
   .footer-links,
   .footer-contact {
     width: 100%;
-    margin-bottom: 0;          /* مسافة موجودة في gap */
+    margin-bottom: 0;
+    /* مسافة موجودة في gap */
   }
 
   .footer-top-info {
-    flex-direction: column;    /* أيقونات عمودية */
+    flex-direction: column;
+    /* أيقونات عمودية */
     align-items: center;
     padding: 20px 30px;
-    gap: 25px;                 /* المسافة بين كل div أيقونات */
+    gap: 25px;
+    /* المسافة بين كل div أيقونات */
   }
 
   .footer-top-info div {
     display: flex;
-    flex-direction: column;    /* أيقونات داخل كل div عمودي */
+    flex-direction: column;
+    /* أيقونات داخل كل div عمودي */
     align-items: center;
-    gap: 20px;                 /* المسافة بين الأيقونات */
+    gap: 20px;
+    /* المسافة بين الأيقونات */
   }
 }
 
@@ -238,7 +253,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* المسافة بين الأيقونات */
+    gap: 20px;
+    /* المسافة بين الأيقونات */
   }
 
   .footer-bottom {

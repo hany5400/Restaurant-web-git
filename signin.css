@@ -9,6 +9,13 @@ body {
     background-color: #f8f4ec;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 
 .navbar {
     background-color: #0a0f1a;
@@ -299,78 +306,87 @@ footer {
 /* للتابلت */
 @media (max-width: 1024px) {
     .footer-main {
-      flex-direction: column;   /* كل الأقسام عمودي */
-      text-align: center;
-      padding: 40px 20px;
-      align-items: center;      /* المركزية لكل المحتوى */
-      gap: 30px;                /* مسافة بين الأقسام */
+        flex-direction: column;
+        /* كل الأقسام عمودي */
+        text-align: center;
+        padding: 40px 20px;
+        align-items: center;
+        /* المركزية لكل المحتوى */
+        gap: 30px;
+        /* مسافة بين الأقسام */
     }
-  
+
     .footer-info,
     .footer-links,
     .footer-contact {
-      width: 100%;
-      margin-bottom: 0;          /* مسافة موجودة في gap */
+        width: 100%;
+        margin-bottom: 0;
+        /* مسافة موجودة في gap */
     }
-  
+
     .footer-top-info {
-      flex-direction: column;    /* أيقونات عمودية */
-      align-items: center;
-      padding: 20px 30px;
-      gap: 25px;                 /* المسافة بين كل div أيقونات */
+        flex-direction: column;
+        /* أيقونات عمودية */
+        align-items: center;
+        padding: 20px 30px;
+        gap: 25px;
+        /* المسافة بين كل div أيقونات */
     }
-  
+
     .footer-top-info div {
-      display: flex;
-      flex-direction: column;    /* أيقونات داخل كل div عمودي */
-      align-items: center;
-      gap: 20px;                 /* المسافة بين الأيقونات */
+        display: flex;
+        flex-direction: column;
+        /* أيقونات داخل كل div عمودي */
+        align-items: center;
+        gap: 20px;
+        /* المسافة بين الأيقونات */
     }
-  }
-  
-  /* للموبايل */
-  @media (max-width: 768px) {
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
     .footer-main {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 15px;
-      align-items: center;
-      gap: 25px;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+        align-items: center;
+        gap: 25px;
     }
-  
+
     .footer-info,
     .footer-links,
     .footer-contact {
-      width: 100%;
-      margin-bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
     }
-  
+
     .footer-links ul li a {
-      font-size: 16px;
-      margin-bottom: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
-  
+
     .footer-top-info {
-      flex-direction: column;
-      align-items: center;
-      padding: 15px 20px;
-      gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 20px;
     }
-  
+
     .footer-top-info div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px; /* المسافة بين الأيقونات */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* المسافة بين الأيقونات */
     }
-  
+
     .footer-bottom {
-      font-size: 14px;
-      padding: 15px 10px;
+        font-size: 14px;
+        padding: 15px 10px;
     }
-  
+
     .footer-bottom a {
-      display: block;
-      padding: 10px 0;
+        display: block;
+        padding: 10px 0;
     }
-  }
+}
