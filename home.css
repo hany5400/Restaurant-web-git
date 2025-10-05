@@ -429,9 +429,6 @@ body {
   margin: 0 5px;
 }
 
-.prev-btn {
-  font-size: 338px;
-}
 
 
 .food-news {
@@ -896,13 +893,76 @@ footer {
   }
 }
 
-/* ===== Responsive for testimonial slider buttons ===== */
+/* ===== Testimonial Slider Buttons ===== */
+.slider-nav button {
+  background: #eb0029;
+  color: white;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .slider-nav button {
+    padding: 10px 18px;
+    font-size: 18px;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .slider-nav button {
-    font-size: 24px;       /* أكبر شويه عشان يبانوا متساويين */
-    padding: 12px 16px;    /* توحيد البادينج */
-    width: 60px;           /* عرض ثابت */
-    height: 60px;          /* ارتفاع ثابت */
+    font-size: 18px;
+    padding: 12px 0;
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+  }
+}
+
+
+/* ===== News Card / Read More Buttons ===== */
+.news-card button,
+.read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  background: #ff4d00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .news-card button,
+  .read-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 60%;
+    max-width: 200px;
+    margin: 10px auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .news-card button,
+  .read-more {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 0;
+    font-size: 15px;
+    margin: 10px auto 20px auto;
   }
 }
 
