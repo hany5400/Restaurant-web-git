@@ -9,7 +9,8 @@ body {
   background-color: #f8f4ec;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -431,7 +432,7 @@ html, body {
 
 .food-news {
   text-align: center;
-  padding: 50px;
+  padding: 20px 10px;
   background-color: #f8f4ec;
 }
 
@@ -542,26 +543,30 @@ html, body {
   color: darkred;
 }
 
-.omar{
+.omar {
   display: flex;
   flex-direction: column;
   width: 320px;
 }
 
-#panel1, #panel2, #panel3,
-#flip1, #flip2, #flip3 {
-    padding: 5px;
-    text-align: center;
-    background: white;
-    border-radius: 5px;
-    color: black;
-    border: solid 1px #c3c3c3;
-    cursor: pointer;
+#panel1,
+#panel2,
+#panel3,
+#flip1,
+#flip2,
+#flip3 {
+  padding: 5px;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  border: solid 1px #c3c3c3;
+  cursor: pointer;
 }
 
 #panel1 {
-    padding: 50px;
-    display: none;
+  padding: 50px;
+  display: none;
 }
 
 
@@ -574,7 +579,7 @@ html, body {
 #panel3 {
   padding: 50px;
   display: none;
-} 
+}
 
 
 
@@ -716,6 +721,7 @@ footer {
   .hero {
     padding-left: 100px;
   }
+
   .hero img {
     width: 400px;
     right: 5%;
@@ -731,7 +737,8 @@ footer {
   }
 
   .nav {
-    display: none; /* نخليها تختفي */
+    display: none;
+    /* نخليها تختفي */
     flex-direction: column;
     background: #0a0f1a;
     width: 100%;
@@ -887,6 +894,11 @@ footer {
 
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
+  .food-news {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
   .news-container {
     display: flex;
     flex-direction: column;
@@ -908,7 +920,7 @@ footer {
   .news-card button {
     display: block;
     width: 80%;
-    margin: 10px auto 20px;
+    margin: 15px auto 20px;
     font-size: 14px;
     text-align: center;
   }
