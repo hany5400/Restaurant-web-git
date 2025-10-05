@@ -856,3 +856,65 @@ footer {
     border-radius: 50%;
   }
 }
+
+
+/* ===== Responsive for "What Our Clients Say" section ===== */
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-image {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .testimonial-image img {
+    border-radius: 0;
+  }
+
+  .testimonial-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimonial-content h2 {
+    font-size: 24px;
+  }
+}
+
+/* ===== Responsive for "Our Latest Foods News" section ===== */
+@media (max-width: 768px) {
+  .news-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-card button {
+    width: 80%;
+    font-size: 14px;
+  }
+}
