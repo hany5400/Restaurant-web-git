@@ -948,13 +948,16 @@ footer {
     text-align: center;
   }
 
-  /* Read More button */
-  .read-more {
-    width: fit-content;
-    margin: 10px auto 20px auto; /* يخلّيها في النص */
-    text-align: center;
-    cursor: pointer;
-  }
+/* Read More button for mobile */
+.read-more {
+  width: 90%;           /* خلي العرض أكبر */
+  max-width: 300px;     /* أقصى عرض مناسب */
+  margin: 10px auto 20px auto; /* يظل في النص */
+  text-align: center;
+  padding: 12px 0;      /* ارتفاع أكبر شويه */
+  font-size: 15px;      /* حجم الخط أكبر شويه */
+  cursor: pointer;
+}
 
   /* Panel content */
   .panel {
