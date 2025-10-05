@@ -897,37 +897,35 @@ footer {
   .food-news {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* خلى المحتوى على الشمال شوية */
     justify-content: center;
-    text-align: center;
-    padding: 20px 10px; /* خفيف من الجوانب */
+    text-align: left;
+    padding: 20px 15px; /* شوية مسافة من الجوانب */
     width: 100%;
   }
 
   .news-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    align-items: flex-start; /* يلتزم بالشمال */
     gap: 15px;
   }
 
   .news-card {
     width: 90%;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto; /* لو تحب تسيبها شوية وسط ممكن تخلي margin-left:0; */
+    text-align: left;
   }
 
   .news-card img {
     display: block;
-    margin: 0 auto;
+    margin-left: 0; /* تبقى عاليسار */
   }
 
   .news-card button {
     display: block;
-    width: 80%;
-    margin: 10px auto 20px;
+    width: 70%; /* أصغر شوية */
+    margin: 10px 0 20px 0; /* على الشمال */
     font-size: 14px;
     text-align: center;
   }
