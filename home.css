@@ -886,7 +886,7 @@ footer {
 
   .news-card button {
     display: block;
-    width: calc(90% - 30px); /* يخليه في حدود الصورة */
+    width: calc(100% - 30px); /* يخليه في حدود الصورة */
     margin: 10px auto 20px;
     font-size: 14px;
     max-width: 250px; /* عشان لو الصورة صغيرة قوي */
