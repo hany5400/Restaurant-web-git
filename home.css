@@ -658,3 +658,72 @@ footer {
   display: block;
   margin-bottom: 5px;
 }
+
+
+/* للأجهزة التابلت */
+@media (max-width: 1024px) {
+  .hero {
+    padding-left: 100px;
+  }
+  .hero img {
+    width: 400px;
+    right: 5%;
+  }
+}
+
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav {
+    display: none; /* نخليها تختفي */
+    flex-direction: column;
+    background: #0a0f1a;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .cart-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero img {
+    position: static;
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .deals-container,
+  .food-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+  }
+}
