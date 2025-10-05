@@ -315,9 +315,6 @@ footer {
 
 
 
-
-
-
 /* ===== Footer Responsive Vertical ===== */
 
 /* للتابلت */
@@ -359,6 +356,61 @@ footer {
         /* المسافة بين الأيقونات */
     }
 }
+
+/* Navbar basic */
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+/* Hide nav menu on small screens */
+.nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* تحت الـ navbar */
+    left: 0;
+    width: 100%;
+    background-color: #0a0f1a;
+    padding: 15px 0;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Hide nav by default on small screens */
+@media (max-width: 1024px) {
+    .nav {
+        display: none; /* hide menu initially */
+    }
+
+    .menu-toggle {
+        display: block; /* show hamburger button */
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: relative;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .nav.show {
+        top: 55px;
+        padding: 10px 0;
+    }
+
+    .nav a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
 
 /* للموبايل */
 @media (max-width: 768px) {
