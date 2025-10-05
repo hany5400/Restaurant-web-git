@@ -838,62 +838,78 @@ footer {
 
 /* ===== Responsive for "What Our Clients Say" section ===== */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-    .testimonial-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-  
-    .testimonial-content {
-      width: 100%;
-      padding: 20px;
-    }
-  
-    .testimonial-card {
-      width: 90%;
-      margin: 20px auto;
-    }
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .testimonial-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
   }
 
   .testimonial-image {
     width: 100%;
     border-radius: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .testimonial-image img {
     border-radius: 0;
+    display: block;
+    margin: 0 auto;
   }
-
 
   .testimonial-card img {
     width: 80px;
     height: 80px;
+    margin: 0 auto 10px;
+    display: block;
   }
 
   .testimonial-content h2 {
     font-size: 24px;
+    text-align: center;
   }
 }
 
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .news-card {
-    width: 100%;
-    margin: 0 auto 3px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .news-card img {
+    display: block;
+    margin: 0 auto;
   }
 
   .news-card button {
     display: block;
-    width: calc(100% - 30px); /* يخليه في حدود الصورة */
+    width: 80%;
     margin: 10px auto 20px;
     font-size: 14px;
-    max-width: 250px; /* عشان لو الصورة صغيرة قوي */
+    text-align: center;
   }
 }
-
-
-
-
-
