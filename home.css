@@ -9,6 +9,12 @@ body {
   background-color: #f8f4ec;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .navbar {
   background-color: #0a0f1a;
   padding: 15px 50px;
@@ -725,5 +731,38 @@ footer {
   .footer-links,
   .footer-contact {
     width: 100%;
+  }
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* لما الشاشة تصغر */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0a0f1a;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-menu.show {
+    display: flex;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -13,7 +13,10 @@
     <header>
         <nav class="navbar">
             <div class="logo">FODO</div>
-            <div class="nav">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+            <div class="nav" id="nav-menu">
                 <a href="homepage.html" class="active">Home</a>
                 <a href="about.html">About us</a>
                 <a href="menu.html">Menu</a>
@@ -111,7 +114,7 @@
             <div class="testimonial-image">
                 <img src="./image/baker.png" alt="Baker Making Pizza">
             </div>
-    
+
 
             <div class="testimonial-content">
                 <h3>🍕 TESTIMONIALS</h3>
@@ -132,9 +135,9 @@
                 <div class="slider-nav">
                     <button class="prev-btn">←</button>
                     <button class="next-btn">→</button>
+                </div>
             </div>
         </div>
-      </div>
     </section>
 
 
@@ -275,22 +278,61 @@
 
 
         $(document).ready(function () {
-                $("#future").on({
-                    mouseenter: function () {
-                        $(this).css("background-color", "lightgray");
-                    },
-                    mouseleave: function () {
-                        $(this).css("background-color", "lightblue");
-                    },
-                    click: function () {
-                        $(this).css("background-color", "lightsalmon");
-                    }
-                });
+            $("#future").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "lightsalmon");
+                }
             });
-
-
-
+        });
     </script>
+
+<script>
+    // Navbar toggle for mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+  
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+  
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+          menuToggle.setAttribute('aria-expanded', false);
+        }
+      });
+    });
+  
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+  
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 
     <footer>
