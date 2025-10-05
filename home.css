@@ -894,39 +894,83 @@ footer {
 
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
+
+  /* Section container */
   .food-news {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* خلى المحتوى على الشمال شوية */
-    justify-content: center;
-    text-align: left;
-    padding: 20px 15px; /* شوية مسافة من الجوانب */
+    align-items: center; /* يخلّي كل المحتوى في النص */
+    text-align: center;  /* العناوين والفقرات في النص */
+    padding: 20px 15px;
     width: 100%;
   }
 
+  /* Container for all news cards */
   .news-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* يلتزم بالشمال */
-    gap: 15px;
+    align-items: center; /* يخلي كل بطاقة في الوسط */
+    gap: 20px;
+    width: 100%;
   }
 
+  /* Individual news card */
   .news-card {
-    width: 90%;
-    margin: 0 auto; /* لو تحب تسيبها شوية وسط ممكن تخلي margin-left:0; */
-    text-align: left;
+    width: 90%; /* تقريباً نفس عرض الموبايل */
+    max-width: 350px; /* أقصى عرض */
+    margin: 0 auto; /* في الوسط */
+    text-align: center; /* كل المحتوى داخل البطاقة في النص */
   }
 
+  /* الصورة داخل البطاقة */
   .news-card img {
+    width: 100%;
     display: block;
-    margin-left: 0; /* تبقى عاليسار */
+    margin: 0 auto; /* في النص */
+    border-radius: 10px 10px 0 0;
   }
 
+  /* معلومات الخبر (التاريخ والعنوان) */
+  .news-info {
+    display: flex;
+    flex-direction: column; /* عمودي بدل صف */
+    align-items: center; /* في الوسط */
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .news-date {
+    margin: 0; /* في الوسط */
+  }
+
+  .news-meta p,
+  .news-meta h3 {
+    text-align: center;
+  }
+
+  /* Read More button */
+  .read-more {
+    width: fit-content;
+    margin: 10px auto 20px auto; /* يخلّيها في النص */
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Panel content */
+  .panel {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* أزرار إضافية داخل البطاقة */
   .news-card button {
     display: block;
-    width: 70%; /* أصغر شوية */
-    margin: 10px 0 20px 0; /* على الشمال */
-    font-size: 14px;
+    width: 80%;
+    max-width: 250px;
+    margin: 10px auto 20px auto;
     text-align: center;
   }
 }
