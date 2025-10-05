@@ -1078,6 +1078,7 @@ footer {
   .footer-top-info div {
     justify-content: center;
     margin-bottom: 15px;
+    gap: 25px; /* زودنا التباعد بين icons */
   }
 }
 
@@ -1104,12 +1105,13 @@ footer {
   .footer-top-info {
     flex-direction: column;
     padding: 15px 20px;
-    gap: 10px;
+    gap: 15px; /* زودنا التباعد هنا كمان */
   }
 
   .footer-top-info div {
     justify-content: center;
     margin-bottom: 10px;
+    gap: 20px; /* زودنا التباعد بين icons */
   }
 
   .footer-bottom {
