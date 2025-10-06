@@ -776,17 +776,6 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
-  .footer-main {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-info,
-  .footer-links,
-  .footer-contact {
-    width: 100%;
-  }
 }
 
 

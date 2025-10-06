@@ -5,8 +5,9 @@
     font-family: Arial, sans-serif;
 }
 
+
 body {
-    color: white;
+    background-color: #f8f4ec;
 }
 
 html,
@@ -82,16 +83,20 @@ body {
         text-align: left;
         animation: fadeIn 0.25s ease-in-out;
     }
+
     .nav a {
         margin: 12px 0;
         font-size: 18px;
     }
+
     .nav.show {
         display: flex;
     }
+
     .menu-toggle {
         display: block;
     }
+
     .cart-icon {
         margin-left: 10px;
     }
@@ -103,61 +108,104 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* ===== Contact Wrapper ===== */
 .contact-wrapper {
     background-color: #ffffff;
+    height: 600px;
+    width: 80%;
     border-radius: 30px;
     display: flex;
     gap: 60px;
     margin: 160px auto 120px auto;
+    position: relative;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    flex-wrap: wrap;
 }
 
-/* ===== Image Section ===== */
 .image-section {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
+    width: 10%;
 }
 
 .image-section img {
     width: 300px;
     height: 330px;
     border-radius: 20%;
-    object-fit: cover;
 }
 
-/* ===== Container ===== */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
     background-color: #f8f4ec;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 600px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    height: 500px;
+    position: relative;
+    left: -130px;
 }
 
-/* ===== Headings ===== */
+/* ===== Loading responsive ===== */
+.loading {
+    width: 60%; /* حجم أصغر من 100% عشان يبقى في النص */
+    max-width: 400px; /* أقصى عرض للـ desktop */
+    position: relative; 
+    margin: 20px auto; /* يضمن أنها في النص أفقياً */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* spacing متساوي بين الأجزاء */
+    gap: 2%;
+}
+
+.loadPart {
+    flex: 1;
+    height: 20px; /* ارتفاع الشريط على اللابتوب */
+    background-color: rgb(223, 223, 223);
+    border: 1px solid rgba(44, 42, 42, 0.163);
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.loaded {
+    background-color: red;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 1024px) {
+    .loadPart {
+        height: 25px; /* أكبر شوية للتابلت */
+    }
+}
+
+@media (max-width: 768px) {
+    .loadPart {
+        height: 30px; /* أكبر للموبايل */
+    }
+}
+
+
+#girl {
+    position: relative;
+    width: 300px;
+    height: 330px;
+    border-radius: 20%;
+  }
+
+
 h1 {
     font-size: 50px;
     color: red;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 h2 {
@@ -166,51 +214,50 @@ h2 {
     color: #333;
 }
 
-/* ===== Input Group ===== */
 .input-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row; 
+    gap: 10px; 
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* ===== Pizza girl image responsive ===== */
+.image-section img {
+    width: 250px; 
+    height: auto;
+    border-radius: 20%;
+}
+
+.pass {
+    flex-direction: column;
+    display: flex;
+}
+
+#strength {
+    text-align: left;
+    margin-top: 0px;
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
 }
 
 .input-group input {
-    width: 100%;
-    max-width: 300px;
+    width: 256px;
     height: 55px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
-}
-
-/* ===== Loading Bar ===== */
-.loading {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    width: 80%;
-    max-width: 320px;
-    margin-top: 20px;
-}
-
-.loadPart {
     flex: 1;
-    height: 8px;
-    background-color: rgb(223,223,223);
-    border-radius: 6px;
+    min-width: 0;
 }
 
-.loaded {
-    background-color: red;
-}
 
-/* ===== Button ===== */
-button {
-    width: 25%;
+.submit {
+    width: 35%;
     padding: 12px;
     background: orange;
     color: white;
@@ -221,11 +268,10 @@ button {
     transition: 0.3s ease;
 }
 
-#submit-button:hover {
+.submit:hover {
     background: #d62839;
 }
 
-/* ===== Paragraphs and Links ===== */
 .container p {
     margin-top: 30px;
     font-size: 16px;
@@ -242,7 +288,7 @@ button {
     text-decoration: underline;
 }
 
-/* ===== Footer (unchanged) ===== */
+/* ===== Footer  ===== */
 footer {
     width: 100vw;
     max-width: 100%;
@@ -252,46 +298,300 @@ footer {
     margin: 0;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
+
+.footer-top-info {
+    background: #f36b26;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.footer-top-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.footer-top-info div i {
+    font-size: 22px;
+    background: white;
+    color: #f36b26;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+    width: 30%;
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 20px;
+    color: #f36b26;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a:hover {
+    color: orange;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background: #eb0029;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-bottom a {
+    text-align: center;
+    padding: 20px 0;
+    background: #eb0029;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* ===== Responsive for smaller laptops ===== */
+@media (max-width: 1366px) {
     .contact-wrapper {
+        width: 85%;
+        gap: 40px;
+        margin: 140px auto 100px auto;
+        height: auto;
         flex-direction: column;
-        gap: 30px;
+        padding: 20px;
     }
+
     .image-section {
         width: 100%;
+        display: flex;
         justify-content: center;
     }
+
+    .image-section img {
+        width: 250px;
+        height: auto;
+    }
+
     .container {
-        width: 90%;
-        padding: 30px 20px;
+        width: 500px;
+        height: auto;
+        left: 0;
+        padding: 30px;
     }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .input-group input {
-        max-width: 250px;
+        width: 100%;
     }
-    .loading {
-        width: 85%;
-        margin-top: 20px;
+
+    button {
+        width: 50%;
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 20px 15px;
-    }
-    .input-group input {
-        max-width: 220px;
-    }
-    .loading {
+
+
+/* ===== Smaller laptops / tablets ===== */
+@media (max-width: 1024px) {
+    .contact-wrapper {
         width: 90%;
-        margin-top: 15px;
+        margin: 120px auto 80px auto;
+        gap: 30px;
     }
-    .loadPart {
-        height: 6px;
+
+
+    .container {
+        width: 90%;
+        padding: 25px;
     }
-    .image-section img {
-        width: 200px;
-        height: 220px;
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+
+
+
+/* للموبايل */
+@media (max-width: 768px) {
+
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+    }
+}
+
+/* للتابلت */
+@media (max-width: 1024px) {
+    .footer-main {
+        flex-direction: column;
+        /* كل الأقسام عمودي */
+        text-align: center;
+        padding: 40px 20px;
+        align-items: center;
+        /* المركزية لكل المحتوى */
+        gap: 30px;
+        /* مسافة بين الأقسام */
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+        margin-bottom: 0;
+        /* مسافة موجودة في gap */
+    }
+
+    .footer-top-info {
+        flex-direction: column;
+        /* أيقونات عمودية */
+        align-items: center;
+        padding: 20px 30px;
+        gap: 25px;
+        /* المسافة بين كل div أيقونات */
+    }
+
+    .footer-top-info div {
+        display: flex;
+        flex-direction: column;
+        /* أيقونات داخل كل div عمودي */
+        align-items: center;
+        gap: 20px;
+        /* المسافة بين الأيقونات */
+    }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer-links ul li a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .footer-top-info {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .footer-top-info div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* المسافة بين الأيقونات */
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+
+    .footer-bottom a {
+        display: block;
+        padding: 10px 0;
     }
 }

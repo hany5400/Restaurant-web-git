@@ -68,3 +68,113 @@ button {
 button:hover {
     background: darkorange;
 }
+
+
+
+
+
+/* ===== Responsive ===== */
+
+/* للشاشات المتوسطة (تابلت) */
+@media (max-width: 1024px) {
+    .welcome {
+        margin-top: 250px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .left-img {
+        width: 300px;
+        height: 300px;
+        transform: translateY(-150px);
+    }
+
+    .right-img {
+        width: 300px;
+        height: 300px;
+        transform: translateY(-120px); /* نزلناها شوية عن الleft */
+    }
+
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .text h2 {
+        font-size: 25px;
+    }
+
+    button {
+        min-width: 180px;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* للشاشات الصغيرة (موبايل) */
+@media (max-width: 768px) {
+    .welcome {
+        margin-top: 150px;
+    }
+
+    .left-img {
+        width: 200px;
+        height: 200px;
+        transform: translateY(-30px);
+    }
+
+    .right-img {
+        width: 200px;
+        height: 200px;
+        transform: translateY(-20px); /* نزلناها أكتر */
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text h2 {
+        font-size: 20px;
+    }
+
+    button {
+        min-width: 150px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* للشاشات الصغيرة جدًا (موبايل صغير) */
+@media (max-width: 480px) {
+    .welcome {
+        margin-top: 100px;
+    }
+
+    .left-img {
+        width: 150px;
+        height: 150px;
+        transform: translateY(-80px);
+    }
+
+    .right-img {
+        width: 150px;
+        height: 150px;
+        transform: translateY(-50px); /* نزلناها أكتر */
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .text h2 {
+        font-size: 16px;
+    }
+
+    button {
+        min-width: 120px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
