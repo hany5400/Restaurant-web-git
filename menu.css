@@ -566,7 +566,7 @@ footer {
   }
 
   .menu-item {
-    min-width: 120px; /* اختياري لضبط العرض */
+    min-width: 20px; /* اختياري لضبط العرض */
   }
 
   .menu-item img {
