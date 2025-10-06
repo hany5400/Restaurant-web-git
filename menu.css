@@ -325,29 +325,6 @@ body {
   color: white;
 }
 
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .menu {
-    width: 100%;
-  }
-
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 
 footer {
@@ -584,8 +561,12 @@ footer {
   }
 
   .menu-grid {
-    grid-template-columns: repeat(2, 2fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* خلي كل صف فيه 2 items */
+    gap: 20px; /* مسافة بين العناصر */
+  }
+
+  .menu-item {
+    min-width: 197px; /* اختياري لضبط العرض */
   }
 
   .menu-item img {
