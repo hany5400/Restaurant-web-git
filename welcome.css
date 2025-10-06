@@ -122,28 +122,39 @@ button:hover {
     .content {
         flex-direction: column;
         align-items: center;
-        gap: 25px; /* مسافة كويسة بين الصور والنص */
+        gap: 45px;
+        margin-bottom: 60px;
     }
 
-    .left-img,
+    .left-img {
+        width: 230px;
+        height: 230px;
+        transform: translateY(0);
+        margin-bottom: 10px; /* قللنا المسافة تحت الصورة الشمال */
+    }
+
     .right-img {
         width: 230px;
         height: 230px;
-        transform: translateY(0); /* لغينا الرفع علشان الصور متدخلش على النص */
+        transform: translateY(0);
+        margin-bottom: 25px;
     }
 
     .text h1 {
         font-size: 30px;
+        margin-top: 15px;
     }
 
     .text h2 {
         font-size: 20px;
+        margin-bottom: 25px;
     }
 
     button {
         min-width: 150px;
         font-size: 14px;
         padding: 8px 16px;
+        margin-top: 25px;
     }
 }
 
@@ -154,27 +165,38 @@ button:hover {
     }
 
     .content {
-        gap: 20px;
+        gap: 35px;
+        margin-bottom: 50px;
     }
 
-    .left-img,
+    .left-img {
+        width: 180px;
+        height: 180px;
+        transform: translateY(0);
+        margin-bottom: 8px; /* قللنا أكتر على الموبايل الصغير */
+    }
+
     .right-img {
         width: 180px;
         height: 180px;
         transform: translateY(0);
+        margin-bottom: 20px;
     }
 
     .text h1 {
         font-size: 24px;
+        margin-top: 15px;
     }
 
     .text h2 {
         font-size: 16px;
+        margin-bottom: 20px;
     }
 
     button {
         min-width: 120px;
         font-size: 12px;
         padding: 6px 12px;
+        margin-top: 20px;
     }
 }
