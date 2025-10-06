@@ -235,7 +235,7 @@ h4 {
 
 /* ===== Button ===== */
 .submit {
-  width: 35%;
+  width: 45%;
   padding: 12px;
   background: orange;
   color: white;
@@ -410,9 +410,7 @@ footer {
     text-align: center;
     padding: 40px 20px;
     align-items: center;
-    /* المركزية لكل المحتوى */
     gap: 30px;
-    /* مسافة بين الأقسام */
   }
 
   .footer-info,
