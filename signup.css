@@ -372,6 +372,117 @@ footer {
     margin-bottom: 5px;
 }
 
+/* ===== Contact & Form Responsive ===== */
+
+/* للتابلت */
+@media (max-width: 1024px) {
+
+    .contact-wrapper {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: 120px auto 80px auto;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .image-section {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-section img {
+        width: 250px;
+        height: 280px;
+        border-radius: 20%;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        left: 0;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+
+    .contact-wrapper {
+        flex-direction: column;
+        width: 95%;
+        margin: 80px auto 60px auto;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .image-section {
+        width: 100%;
+    }
+
+    .image-section img {
+        width: 200px;
+        height: 220px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        height: auto;
+        left: 0;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* تحسينات عامة للـ loading bar على الأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .loading {
+        gap: 2%;
+    }
+    .loadPart {
+        width: 12%;
+        height: 6px;
+    }
+}
 
 /* ===== Footer Responsive Vertical ===== */
 

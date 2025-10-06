@@ -5,9 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  color: white;
-}
 
 html,
 body {
@@ -115,12 +112,33 @@ body {
 
 
 
-.background-image {
+.background-container {
   width: 100%;
-  height: 450px;
-  background: url("./image/menuu.jpeg");
-  background-size: cover;
-  background-repeat: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0a0f1a; /* خلفية متناسقة لو الصورة أصغر */
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* تبين الصورة كلها بدون قص */
+}
+
+/* للتابلت */
+@media (max-width: 1024px) {
+  .menu-image {
+    max-height: 500px;
+  }
+}
+
+/* للموبايل */
+@media (max-width: 600px) {
+  .menu-image {
+    max-height: 350px;
+  }
 }
 
 .container {
@@ -276,6 +294,7 @@ body {
   transition: background 0.3s;
   width: 100%;
 }
+
 
 .menu-item button:hover {
   background: #e95d26;
@@ -451,93 +470,90 @@ footer {
   margin-bottom: 5px;
 }
 
+/* ===== Responsive Adjustments ===== */
 
-/* ===== Footer Responsive Vertical ===== */
-
-/* للتابلت */
+/* ===== Tablet (1024px) ===== */
 @media (max-width: 1024px) {
-  .footer-main {
+  .container {
     flex-direction: column;
-    /* كل الأقسام عمودي */
-    text-align: center;
-    padding: 40px 20px;
-    align-items: center;
-    /* المركزية لكل المحتوى */
-    gap: 30px;
-    /* مسافة بين الأقسام */
+    gap: 20px;
+    padding: 20px;
   }
 
-  .footer-info,
-  .footer-links,
-  .footer-contact {
+  .sidebar {
     width: 100%;
-    margin-bottom: 0;
-    /* مسافة موجودة في gap */
+  }
+
+  .menu {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .menu-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .menu-item h4 {
+    font-size: 16px;
+  }
+
+  .menu-item .price {
+    font-size: 18px;
+  }
+
+  .menu-item button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   .footer-top-info {
     flex-direction: column;
-    /* أيقونات عمودية */
-    align-items: center;
-    padding: 20px 30px;
-    gap: 25px;
-    /* المسافة بين كل div أيقونات */
+    gap: 20px;
+    padding: 15px 20px;
   }
 
   .footer-top-info div {
-    display: flex;
     flex-direction: column;
-    /* أيقونات داخل كل div عمودي */
     align-items: center;
+    gap: 10px;
+  }
+
+  .footer-main {
+    flex-direction: column;
     gap: 20px;
-    /* المسافة بين الأيقونات */
+    padding: 30px 15px;
+    text-align: center;
   }
 }
 
-/* للموبايل */
 @media (max-width: 768px) {
-  .footer-main {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 15px;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .footer-info,
-  .footer-links,
-  .footer-contact {
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .footer-links ul li a {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .footer-top-info {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-    gap: 20px;
-  }
-
-  .footer-top-info div {
+  .pagination {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    /* المسافة بين الأيقونات */
+    justify-content: center !important; /* يوسّط الأزرار أفقيًا */
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 10px auto !important; /* يوسّط الحاوية نفسها */
+    width: fit-content; /* يقيّد عرض الحاوية على الأزرار فقط */
   }
 
-  .footer-bottom {
-    font-size: 14px;
-    padding: 15px 10px;
-  }
-
-  .footer-bottom a {
-    display: block;
-    padding: 10px 0;
+  .pagination button {
+    width: 50px !important;     
+    height: 30px !important;    
+    padding: 0 !important;      
+    font-size: 12px !important; 
+    text-align: center;
+    line-height: 30px;          
   }
 }

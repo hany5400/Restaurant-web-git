@@ -5,9 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f8f4ec;
-}
+
 
 html,
 body {
@@ -129,6 +127,7 @@ body {
     justify-content: center;
     padding: 20px;
 }
+
 
 .image-section {
     width: 10%;
@@ -355,7 +354,98 @@ footer {
 }
 
 
+/* ===== Signup Responsive ===== */
 
+/* للتابلت */
+@media (max-width: 1024px) {
+    .contact-wrapper {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      margin: 100px auto;
+      gap: 30px;
+      padding: 20px;
+    }
+  
+    .image-section {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .image-section img {
+      width: 200px;
+      height: 220px;
+    }
+  
+    .container {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      left: 0;
+      padding: 30px 20px;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  /* للموبايل */
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      flex-direction: column;
+      width: 95%;
+      margin: 60px auto;
+      padding: 15px;
+      gap: 20px;
+    }
+  
+    .image-section {
+      width: 100%;
+    }
+  
+    .image-section img {
+      width: 180px;
+      height: 200px;
+    }
+  
+    .container {
+      width: 100%;
+      height: auto;
+      left: 0;
+      padding: 20px 15px;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    #strength {
+      font-size: 11px;
+      margin-left: 5px;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  }
 
 
 

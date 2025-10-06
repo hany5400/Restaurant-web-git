@@ -279,15 +279,44 @@ h2 {
   color: white;
   padding: 25px;
   border-radius: 15px;
-  height: 230px;
   width: 350px;
+  height: 230px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* يخلي المسافات بين المحتوى والزر */
   position: relative;
   transition: transform 0.3s ease-in-out;
+  gap: 30px; /* مسافة بين العناصر جوه الكارت */
 }
+
+.deal-card img {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  top: 5px; /* بعد عن أعلى الكارت */
+  right: 20px; /* بعد عن يمين الكارت */
+  z-index: 0; /* حتى يبقى خلف النص والزر */
+}
+
+.deal-card h3,
+.deal-card p {
+  z-index: 1; /* نصوص فوق الصورة */
+}
+
+.deal-card button {
+  background: #e60023;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px; /* مسافة بين النص والزر */
+  z-index: 1;
+}
+
 
 .deal-card:hover {
   transform: translateY(-5px);
@@ -305,24 +334,6 @@ h2 {
   font-size: 14px;
 }
 
-.deal-card img {
-  width: 100px;
-  height: auto;
-  position: absolute;
-  top: 30px;
-  right: 20px;
-}
-
-.deal-card button {
-  background: #e60023;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-  width: 100%;
-}
 
 .deal-card button::after {
   content: " →";
@@ -458,6 +469,121 @@ footer {
   font-size: 14px;
   display: block;
   margin-bottom: 5px;
+}
+
+
+/* ===== About Section Responsive ===== */
+
+/* للتابلت */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 40px; /* تصغير البادينج شوية */
+  }
+
+  .about-content {
+    max-width: 500px;
+    padding: 0 10px;
+  }
+
+  .about-images {
+    gap: 15px;
+    flex-wrap: wrap; /* لو الصور كبيرة تتحول لسطر تاني */
+    justify-content: center;
+  }
+
+  .about-img {
+    width: 180px;
+    height: 210px;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 20px;
+    flex-direction: column; /* يصير كل حاجة عمودي */
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-images {
+    flex-direction: column; /* الصور فوق بعض */
+    gap: 10px;
+  }
+
+  .about-img {
+    width: 150px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+
+  .order-btn {
+    width: 80%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 20px auto;
+  }
+}
+
+
+
+/* ===== Deals Section Responsive with vertical spacing ===== */
+
+/* للتابلت */
+@media (max-width: 1024px) {
+  .deals-container {
+    gap: 30px; /* مسافة أكبر بين الكروت */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .deal-card {
+    width: 280px; /* عرض أصغر */
+    height: 200px;
+    padding: 20px;
+  }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .deals-container {
+    flex-direction: column; /* الكروت فوق بعض */
+    gap: 25px; /* مسافة عمودية واضحة */
+    align-items: center; /* يبقى في النص */
+  }
+
+  .deal-card {
+    width: 90%; /* تقريبًا عرض الشاشة */
+    height: auto; /* ارتفاع تلقائي حسب المحتوى */
+    padding: 15px;
+  }
 }
 
 

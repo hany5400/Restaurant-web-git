@@ -5,9 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  color: white;
-}
 
 html,
 body {
@@ -107,6 +104,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -324,9 +322,13 @@ body {
 }
 
 .logo-section {
-  background-color: #f8f5ec;
-  margin-top: 80px;
-  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f7f2f0;
 }
 
 .logo-container {
@@ -559,6 +561,10 @@ body {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: black;
+  /* خلي اللون واضح */
+  text-align: center;
+  /* عشان يبقى متظبط في الموبايل */
 }
 
 .news-meta a {
@@ -614,18 +620,6 @@ body {
   display: none;
 }
 
-
-
-@media (max-width: 1024px) {
-  .news-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .news-card {
-    width: 90%;
-  }
-}
 
 
 footer {
@@ -870,16 +864,7 @@ footer {
 }
 
 /* ===== Testimonial Slider Buttons ===== */
-.slider-nav button {
-  background: #eb0029;
-  color: white;
-  border-radius: 50%;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  margin: 0 5px;
-  transition: all 0.3s ease;
-}
+
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -904,22 +889,11 @@ footer {
 
 
 /* ===== News Card / Read More Buttons ===== */
-.news-card button,
-.read-more {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 15px;
-  border-radius: 8px;
-  background: #ff4d00;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-  text-align: center;
-}
+
 
 /* Tablet */
 @media (max-width: 1024px) {
+
   .news-card button,
   .read-more {
     padding: 10px 20px;
@@ -932,6 +906,7 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
+
   .news-card button,
   .read-more {
     width: 90%;
@@ -946,86 +921,58 @@ footer {
 /* ===== Responsive for "Our Latest Foods News" section ===== */
 @media (max-width: 768px) {
 
-  /* Section container */
   .food-news {
     display: flex;
     flex-direction: column;
-    align-items: center; /* يخلّي كل المحتوى في النص */
-    text-align: center;  /* العناوين والفقرات في النص */
+    align-items: center;
+    text-align: center;
     padding: 20px 15px;
     width: 100%;
   }
 
-  /* Container for all news cards */
   .news-container {
-    display: flex;
     flex-direction: column;
-    align-items: center; /* يخلي كل بطاقة في الوسط */
+    align-items: center;
     gap: 20px;
     width: 100%;
   }
 
-  /* Individual news card */
   .news-card {
-    width: 90%; /* تقريباً نفس عرض الموبايل */
-    max-width: 350px; /* أقصى عرض */
-    margin: 0 auto; /* في الوسط */
-    text-align: center; /* كل المحتوى داخل البطاقة في النص */
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
-  /* الصورة داخل البطاقة */
-  .news-card img {
-    width: 100%;
-    display: block;
-    margin: 0 auto; /* في النص */
-    border-radius: 10px 10px 0 0;
-  }
-
-  /* معلومات الخبر (التاريخ والعنوان) */
   .news-info {
     display: flex;
-    flex-direction: column; /* عمودي بدل صف */
-    align-items: center; /* في الوسط */
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 15px;
   }
 
   .news-date {
-    margin: 0; /* في الوسط */
+    margin: 0;
+  }
+
+  .news-meta {
+    text-align: center;
   }
 
   .news-meta p,
   .news-meta h3 {
-    text-align: center;
+    margin: 5px 0;
   }
 
-/* Read More button for mobile */
-.read-more {
-  width: 90%;           /* خلي العرض أكبر */
-  max-width: 300px;     /* أقصى عرض مناسب */
-  margin: 10px auto 20px auto; /* يظل في النص */
-  text-align: center;
-  padding: 12px 0;      /* ارتفاع أكبر شويه */
-  font-size: 15px;      /* حجم الخط أكبر شويه */
-  cursor: pointer;
-}
-
-  /* Panel content */
-  .panel {
-    width: 90%;
-    max-width: 350px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-    padding: 15px;
+  .news-meta a {
+    justify-content: center;
   }
 
-  /* أزرار إضافية داخل البطاقة */
   .news-card button {
     display: block;
     width: 80%;
     max-width: 250px;
-    margin: 10px auto 20px auto;
-    text-align: center;
+    margin: 10px auto 20px;
   }
 }
 
@@ -1034,32 +981,40 @@ footer {
 /* للتابلت */
 @media (max-width: 1024px) {
   .footer-main {
-    flex-direction: column;   /* كل الأقسام عمودي */
+    flex-direction: column;
+    /* كل الأقسام عمودي */
     text-align: center;
     padding: 40px 20px;
-    align-items: center;      /* المركزية لكل المحتوى */
-    gap: 30px;                /* مسافة بين الأقسام */
+    align-items: center;
+    /* المركزية لكل المحتوى */
+    gap: 30px;
+    /* مسافة بين الأقسام */
   }
 
   .footer-info,
   .footer-links,
   .footer-contact {
     width: 100%;
-    margin-bottom: 0;          /* مسافة موجودة في gap */
+    margin-bottom: 0;
+    /* مسافة موجودة في gap */
   }
 
   .footer-top-info {
-    flex-direction: column;    /* أيقونات عمودية */
+    flex-direction: column;
+    /* أيقونات عمودية */
     align-items: center;
     padding: 20px 30px;
-    gap: 25px;                 /* المسافة بين كل div أيقونات */
+    gap: 25px;
+    /* المسافة بين كل div أيقونات */
   }
 
   .footer-top-info div {
     display: flex;
-    flex-direction: column;    /* أيقونات داخل كل div عمودي */
+    flex-direction: column;
+    /* أيقونات داخل كل div عمودي */
     align-items: center;
-    gap: 20px;                 /* المسافة بين الأيقونات */
+    gap: 20px;
+    /* المسافة بين الأيقونات */
   }
 }
 
@@ -1096,7 +1051,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* المسافة بين الأيقونات */
+    gap: 20px;
+    /* المسافة بين الأيقونات */
   }
 
   .footer-bottom {
@@ -1107,5 +1063,22 @@ footer {
   .footer-bottom a {
     display: block;
     padding: 10px 0;
+  }
+}
+
+
+/* ===== Fix Logo Section Responsive ===== */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-container img {
+    width: 80px;
+    margin: 10px;
   }
 }
