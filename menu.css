@@ -565,10 +565,6 @@ footer {
     gap: 20px; /* مسافة بين العناصر */
   }
 
-  .menu-item {
-    min-width: 20px; /* اختياري لضبط العرض */
-  }
-
   .menu-item img {
     width: 100px;
     height: 100px;
