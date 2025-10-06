@@ -225,17 +225,11 @@ body {
 
 .about-img1,
 .about-img2 {
-  width: 175px;
+  width: 220px;
   height: 230px;
   border-radius: 45%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 1px; /* المسافة بينهم */
 }
-.about-img2 {
-  margin-right: 0; /* عشان التانية ميبقاش فيها مسافة زيادة بعديها */
-}
-
-
 
 .tagline {
   color: #ff6600;
