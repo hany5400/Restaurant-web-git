@@ -119,16 +119,17 @@ button:hover {
         margin-top: 150px;
     }
 
-    .left-img {
-        width: 200px;
-        height: 200px;
-        transform: translateY(-30px);
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; /* مسافة كويسة بين الصور والنص */
     }
 
+    .left-img,
     .right-img {
-        width: 200px;
-        height: 200px;
-        transform: translateY(-20px); /* نزلناها أكتر */
+        width: 230px;
+        height: 230px;
+        transform: translateY(0); /* لغينا الرفع علشان الصور متدخلش على النص */
     }
 
     .text h1 {
@@ -152,16 +153,15 @@ button:hover {
         margin-top: 100px;
     }
 
-    .left-img {
-        width: 150px;
-        height: 150px;
-        transform: translateY(-80px);
+    .content {
+        gap: 20px;
     }
 
+    .left-img,
     .right-img {
-        width: 150px;
-        height: 150px;
-        transform: translateY(-50px); /* نزلناها أكتر */
+        width: 180px;
+        height: 180px;
+        transform: translateY(0);
     }
 
     .text h1 {
