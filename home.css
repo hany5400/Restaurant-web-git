@@ -30,6 +30,11 @@ body {
   color: #eb0029;
 }
 
+.logo a{
+  text-decoration: none;
+  outline: none;
+}
+
 .nav {
   display: flex;
   gap: 25px;

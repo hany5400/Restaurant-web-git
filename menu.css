@@ -30,6 +30,10 @@ body {
   color: #eb0029;
 }
 
+.logo a{text-decoration: none;
+  outline: none;
+  }
+
 .nav {
   display: flex;
   gap: 25px;
@@ -293,6 +297,11 @@ body {
   cursor: pointer;
   transition: background 0.3s;
   width: 100%;
+}
+
+.menu-item a {
+  text-decoration: none;
+  outline: none;
 }
 
 
